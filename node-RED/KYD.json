@@ -1,0 +1,573 @@
+[
+    {
+        "id": "c01397ad.945d2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4d94aff1.09e4d8",
+        "type": "tcp in",
+        "z": "c01397ad.945d2",
+        "name": "ConnectionUser1",
+        "server": "client",
+        "host": "localhost",
+        "port": "60001",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "",
+        "base64": false,
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "5ef28acd.eb85d4"
+            ]
+        ]
+    },
+    {
+        "id": "863a19e7.1c7bc",
+        "type": "tcp in",
+        "z": "c01397ad.945d2",
+        "name": "ConnectionUser2",
+        "server": "client",
+        "host": "localhost",
+        "port": "60002",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "",
+        "base64": false,
+        "x": 160,
+        "y": 500,
+        "wires": [
+            [
+                "61c4dd15.cbd7bc"
+            ]
+        ]
+    },
+    {
+        "id": "2d0a0379.abbc34",
+        "type": "tcp in",
+        "z": "c01397ad.945d2",
+        "name": "ConnectionUser3",
+        "server": "client",
+        "host": "localhost",
+        "port": "60003",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "",
+        "base64": false,
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "e7621edd.380cc"
+            ]
+        ]
+    },
+    {
+        "id": "5908e57a.ffb4f4",
+        "type": "tcp in",
+        "z": "c01397ad.945d2",
+        "name": "ConnectionUser4",
+        "server": "client",
+        "host": "localhost",
+        "port": "60004",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "",
+        "base64": false,
+        "x": 160,
+        "y": 700,
+        "wires": [
+            [
+                "107a3cf.fba6a43"
+            ]
+        ]
+    },
+    {
+        "id": "ef7dd1ea.a51dc8",
+        "type": "tcp in",
+        "z": "c01397ad.945d2",
+        "name": "ConnectionUser5",
+        "server": "client",
+        "host": "localhost",
+        "port": "60005",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "",
+        "base64": false,
+        "x": 160,
+        "y": 800,
+        "wires": [
+            [
+                "9f18f5ca.ac7228"
+            ]
+        ]
+    },
+    {
+        "id": "5ef28acd.eb85d4",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgPort",
+        "func": "msg.port = 60001;\nmsg.user = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "ec2af742.6c0ca",
+                "b30bc180.e9a83"
+            ]
+        ]
+    },
+    {
+        "id": "61c4dd15.cbd7bc",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgPort",
+        "func": "msg.port = 60002;\nmsg.user = 2;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 500,
+        "wires": [
+            [
+                "ec2af742.6c0ca",
+                "b30bc180.e9a83"
+            ]
+        ]
+    },
+    {
+        "id": "e7621edd.380cc",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgPort",
+        "func": "msg.port = 60003;\nmsg.user = 3;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 600,
+        "wires": [
+            [
+                "ec2af742.6c0ca",
+                "b30bc180.e9a83"
+            ]
+        ]
+    },
+    {
+        "id": "107a3cf.fba6a43",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgPort",
+        "func": "msg.port = 60004;\nmsg.user = 4;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 700,
+        "wires": [
+            [
+                "ec2af742.6c0ca",
+                "b30bc180.e9a83"
+            ]
+        ]
+    },
+    {
+        "id": "9f18f5ca.ac7228",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgPort",
+        "func": "msg.port = 60005;\nmsg.user = 5;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 800,
+        "wires": [
+            [
+                "ec2af742.6c0ca",
+                "b30bc180.e9a83"
+            ]
+        ]
+    },
+    {
+        "id": "ec2af742.6c0ca",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgCleaner",
+        "func": "if(msg.payload.search(\"d\")===-1){\n    // the condition is a short way to detect malformed packets\n    return null;\n}\n// omitting TinyOS characters appearing in the printfs \nmsg.payload = msg.payload.substring(msg.payload.search(\"d\") +1,msg.payload.length);\n\n// initialising the date for the following box\nmsg.date = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 600,
+        "wires": [
+            [
+                "d3c762ff.323358",
+                "fc033b58.d94d08"
+            ]
+        ]
+    },
+    {
+        "id": "d3c762ff.323358",
+        "type": "change",
+        "z": "c01397ad.945d2",
+        "name": "msgDate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "date",
+                "pt": "msg",
+                "to": "$now()\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "2e908743.859908"
+            ]
+        ]
+    },
+    {
+        "id": "2e908743.859908",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "IDchecker",
+        "func": "// message user and payload as a variable; if not present default to 0\nvar rec_ID=context.get(\"user_ID\" + msg.user + \"rec_ID\" + msg.payload) || 0;\n\n// the delay before another notification (minutes)\nvar notificationDelay = 10;\n\n\n// the data difference is checked for every existing mote\nif (rec_ID !== 0) {\n    var hoursDiff = parseInt(msg.date.substring(msg.date.search(\"T\") + 1, msg.date.search(\"T\") + 3)) - parseInt(rec_ID.substring(rec_ID.search(\",\")+1,rec_ID.search(\",\")+3));\n    var minDiff = hoursDiff*60 + parseInt(msg.date.substring(msg.date.search(\"T\") + 4, msg.date.search(\"T\") + 6)) - parseInt(rec_ID.substring(rec_ID.search(\",\")+4,rec_ID.search(\",\")+6));\n    var secDiff = minDiff*60 + parseInt(msg.date.substring(msg.date.search(\"T\") + 7, msg.date.search(\"T\") + 9)) - parseInt(rec_ID.substring(rec_ID.search(\",\")+7,rec_ID.search(\",\")+9));\n       \n    if (secDiff >= notificationDelay*60) {\n        // updating rec_ID and sending a notification\n        context.set(\"user_ID\" + msg.user + \"rec_ID\" + msg.payload, msg.payload + \",\" + msg.date.substring(msg.date.search(\"T\") + 1, msg.date.search(\"Z\")));\n        return msg;\n    }\n    else {\n        // set default payload to -1.\n        msg.payload = -1;\n        return msg;\n    }\n}\n\nelse {\n    // first time the mote is detected: set the timestamp and send a notification\n    context.set(\"user_ID\" + msg.user + \"rec_ID\" + msg.payload, msg.payload + \",\" + msg.date.substring(msg.date.search(\"T\") + 1, msg.date.search(\"Z\")));\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 600,
+        "wires": [
+            [
+                "3cc8025c.35779e",
+                "e17c4811.267228"
+            ]
+        ]
+    },
+    {
+        "id": "3cc8025c.35779e",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "msgEvent",
+        "func": "if (msg.payload != -1) {\n    msg.event = \"Keep_Your_distance!\";\n    msg.payload = {\"value1\" : msg.payload};\n    return msg;\n}\nreturn null",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 600,
+        "wires": [
+            [
+                "a49a60b0.6ec1d8"
+            ]
+        ]
+    },
+    {
+        "id": "742367b.725a698",
+        "type": "debug",
+        "z": "c01397ad.945d2",
+        "name": "Log_node-RED",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e32babf4.609538",
+        "type": "file",
+        "z": "c01397ad.945d2",
+        "name": "",
+        "filename": "Log_node-RED.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1010,
+        "y": 60,
+        "wires": [
+            [
+                "742367b.725a698"
+            ]
+        ]
+    },
+    {
+        "id": "a49a60b0.6ec1d8",
+        "type": "switch",
+        "z": "c01397ad.945d2",
+        "name": "userSwitchRequest",
+        "property": "user",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 1190,
+        "y": 600,
+        "wires": [
+            [
+                "c604c5ac.6d0ca8"
+            ],
+            [
+                "6045f4cc.889b24"
+            ],
+            [
+                "20f544ba.696b84"
+            ],
+            [
+                "5b9f1adf.528114"
+            ],
+            [
+                "67036a11.8ee254"
+            ]
+        ]
+    },
+    {
+        "id": "b30bc180.e9a83",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "isReceived",
+        "func": "var dbg = \"msgID: \" + msg._msgid + \", Message received on port \" + msg.port + \" for user \" + msg.user + \".\";\nmsg.payload = dbg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "e32babf4.609538"
+            ]
+        ]
+    },
+    {
+        "id": "fc033b58.d94d08",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "isCleaned",
+        "func": "var dbg = \"msgID: \" + msg._msgid + \", Message for user \" + msg.user + \" cleared:\";\nmsg.payload = dbg + \" user \" + msg.user + \" is too much close to user \" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 200,
+        "wires": [
+            [
+                "e32babf4.609538"
+            ]
+        ]
+    },
+    {
+        "id": "e17c4811.267228",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "isChecked",
+        "func": "if (msg.payload != -1) {\n    var dbg = \"msgID: \" + msg._msgid + \", Sending notification to user \" + msg.user + \"...\";\n   \n} else {\n    var dbg = \"msgID: \" + msg._msgid +\", Not enough time has passed since last notification.\"\n}\nmsg.payload = dbg;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 200,
+        "wires": [
+            [
+                "e32babf4.609538"
+            ]
+        ]
+    },
+    {
+        "id": "92c69bb0.5260f8",
+        "type": "function",
+        "z": "c01397ad.945d2",
+        "name": "isSent",
+        "func": "var dbg = \" (msgID: \" + msg._msgid + \", Notification sent to the user \" + msg.user + \")\";\nmsg.payload = msg.payload + dbg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 200,
+        "wires": [
+            [
+                "e32babf4.609538"
+            ]
+        ]
+    },
+    {
+        "id": "c604c5ac.6d0ca8",
+        "type": "http request",
+        "z": "c01397ad.945d2",
+        "name": "WebRequest",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/use/bPaNtIlZvpvkqF3rlYEIPw",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1390,
+        "y": 400,
+        "wires": [
+            [
+                "92c69bb0.5260f8"
+            ]
+        ]
+    },
+    {
+        "id": "6045f4cc.889b24",
+        "type": "http request",
+        "z": "c01397ad.945d2",
+        "name": "WebRequest",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/use/c2Je9AUKmCwnELnCv4c8ejuKD6OHgomrINXtl_6KXvC",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1390,
+        "y": 500,
+        "wires": [
+            [
+                "92c69bb0.5260f8"
+            ]
+        ]
+    },
+    {
+        "id": "20f544ba.696b84",
+        "type": "http request",
+        "z": "c01397ad.945d2",
+        "name": "WebRequest",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/use/YourPersonalUrlID",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1390,
+        "y": 600,
+        "wires": [
+            [
+                "92c69bb0.5260f8"
+            ]
+        ]
+    },
+    {
+        "id": "5b9f1adf.528114",
+        "type": "http request",
+        "z": "c01397ad.945d2",
+        "name": "WebRequest",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/use/YourPersonalUrlID",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1390,
+        "y": 700,
+        "wires": [
+            [
+                "92c69bb0.5260f8"
+            ]
+        ]
+    },
+    {
+        "id": "67036a11.8ee254",
+        "type": "http request",
+        "z": "c01397ad.945d2",
+        "name": "WebRequest",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/use/YourPersonalUrlID",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1390,
+        "y": 800,
+        "wires": [
+            [
+                "92c69bb0.5260f8"
+            ]
+        ]
+    }
+]

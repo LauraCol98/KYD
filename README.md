@@ -10,4 +10,4 @@
 ## Description 📚
 A project proposed in the course of Internet of Things - A.A. 2020-2021 at Politecnico di Milano
 
-The goal is to create motes attached to people, notifying their distance if too close for the anti SARS-Cov-2 protocol.
+The goal is to create motes attached to people, notifying their distance if too close, according to the anti SARS-Cov-2 protocol.
